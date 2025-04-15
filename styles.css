@@ -1,15 +1,66 @@
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f8f9fa;
 }
 
-section {
-  min-height: 400px;
+/* Glassmorphism Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
 }
 
+/* Hover Animations */
 .card {
-  transition: transform 0.2s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline Effect for Experience */
+.timeline-card {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-card::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(#007bff, #00d4ff);
+}
+
+/* Carousel Styling */
+.carousel-item {
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background: rgba(0, 0, 0, 0.3);
+  width: 5%;
+}
+
+/* Custom Button Hover */
+.btn-primary {
+  background: linear-gradient(45deg, #007bff, #00d4ff);
+  border: none;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(45deg, #0056b3, #0096c7);
+}
+
+/* Section Spacing */
+section {
+  padding: 80px 0;
 }
